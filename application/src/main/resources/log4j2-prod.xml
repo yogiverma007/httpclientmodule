@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="com.freedom">
+
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} -%X{requestId} -%X{channel-code} [%t] %-5p %c{1}:%L - %msg%n
+        </Property>
+    </Properties>
+
+    <Appenders>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} -%X{requestId} -%X{channel-code} [%t] %-5p %c{1}:%L - %msg%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+
+        <logger name="org.springframework" level="off" additivity="false">
+            <AppenderRef ref="Console"/>
+        </logger>
+
+        <logger name="org.hibernate" level="off" additivity="false">
+            <AppenderRef ref="Console"/>
+        </logger>
+
+        <Logger name="org.hibernate.SQL" level="off" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <logger name="com.zaxxer.hikari" level="DEBUG">
+            <AppenderRef ref="Console"/>
+        </logger>
+
+        <Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="off" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <Logger name="org.springframework.orm.jpa.vendor.HibernateJpaDialect" level="OFF" additivity="false"/>
+
+        <logger name="com.freedom" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+        </logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+    </Loggers>
+</Configuration>
