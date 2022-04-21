@@ -188,3 +188,7 @@ public class TouristHttpClient {
   }
 }
 ```
+
+
+
+Taken help from this to call rest apis: https://www.appsloveworld.com/free-online-sample-rest-api-url-for-testing/#createtourist
