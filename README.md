@@ -1,11 +1,13 @@
 # HttpClient Module
 
-**This repository provides the configurable http client. Just change the the property of your http client's in the data source in which you are keeping all the properties and the library will create a new http client and it will replace in your HttpClients Store in the code.
+This repository provides the configurable http client. Just change the the property of your http client's in the data source in which you are keeping all the properties and the library will create a new http client and it will replace in your HttpClients Store in the code.
 
-You need to take care of mainly three parts to use the library:
+You need to take care of mainly below items to use the library:
+- Import or copy http client maven module to your project.
 - Http Client Initializer
 - Http client properties in your configuration.
 - Main HttpClient Class which does the magic of interaction with the services.
+
 
 ### HttpClient Initializer
 ```java
